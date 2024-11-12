@@ -23,24 +23,24 @@ const Projects: React.FC = () => {
     if (!searchQuery) {
       return true;
     }
-  
+
     const queryKeywords = searchQuery.toLowerCase().split(/\s+/);
-  
+
     const matchesKeywords = queryKeywords.every((keyword) => {
       const matchesLanguage = project.language?.toLowerCase().includes(keyword);
-  
+
       const matchesTopics = project.topics?.some((topic: any) =>
         topic.toLowerCase().includes(keyword)
       );
-  
+
       return matchesLanguage || matchesTopics;
     });
-  
+
     return matchesKeywords;
   });
 
   return (
-    <div className='info-header'>
+    <div className='layout'>
       <h1>Projects</h1>
       <input
         type='text'

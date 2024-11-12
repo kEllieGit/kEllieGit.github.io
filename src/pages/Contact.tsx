@@ -11,15 +11,13 @@ const Contact: React.FC = () => {
     };
 
     return (
-        <div className='container'>
-        <div className='info-header'>
+        <div className='center-layout'>
             <h1>Business Contact</h1>
-            <p style={{margin: 0}}>For business purposes only, you may send me an email by clicking the button below. </p>
+            <p style={{ margin: 0 }}>For business purposes only, you may send me an email by clicking the button below. </p>
             <p>For anything else, you can always find me in my <a className='text-highlight' href='https://discord.gg/kKU6a4AYNk'>Discord server</a>!</p>
             <button className='contact-button' onClick={handleContactClick}>
                 Contact
             </button>
-        </div>
         </div>
     );
 };
