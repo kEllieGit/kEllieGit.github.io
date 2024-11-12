@@ -8,7 +8,7 @@ module.exports = {
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
-    publicPath: '/'
+    publicPath: '/kelliegit.github.io/'
   },
   resolve: {
     extensions: ['.tsx', '.ts', '.js']
@@ -34,7 +34,7 @@ module.exports = {
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       template: './src/index.html',
-      title: 'Personal Website'
+      title: 'kelliegit.github.io'
     })
   ]
 };
