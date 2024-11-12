@@ -18,18 +18,18 @@ const Navbar: React.FC = () => {
             <Link to="/projects">Projects</Link>
           </li>
           <li>
-            <Link to="/contact">Contact</Link>
+            <Link to="/faq">FAQ</Link>
           </li>
           <li>
-            <Link to="/faq">FAQ</Link>
+            <Link to="/contact">Contact</Link>
           </li>
         </ul>
       </nav>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/projects" element={<Projects />} />
-        <Route path="/contact" element={<Contact />} />
         <Route path="/faq" element={<FAQ />} />
+        <Route path="/contact" element={<Contact />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>
