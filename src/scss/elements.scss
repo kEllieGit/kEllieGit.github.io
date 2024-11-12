@@ -1,0 +1,157 @@
+@import "./colors.scss";
+
+button {
+    width: 100%;
+    padding: 5px;
+    cursor: pointer;
+    border: none;
+    border-radius: 6px;
+    background-color: $primary-color;
+    color: $text-color;
+    font-size: 1rem;
+    transition: background 0.3s, transform 0.1s ease, box-shadow 0.1s ease;
+
+    &:active {
+        transform: translateY(2px);
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    }
+
+    &:hover {
+        background-color: $button-hover;
+        box-shadow: 0 2px 8px rgba(178, 47, 190, 0.4);
+    }
+}
+
+.text-highlight {
+    color: $highlight-color;
+    text-shadow: 0 0 8px $highlight-color;
+}
+
+.icon {
+    pointer-events: all;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    filter: drop-shadow(0 4px 1px rgba(0, 0, 0, 0.6));
+    transition: transform 0.2s ease, filter 0.2s ease, box-shadow 0.2s ease;
+
+    &:hover {
+      filter: brightness(1.6) contrast(1.2) drop-shadow(0 4px 1px rgba(0, 0, 0, 0.6));
+      transform: scale(1.15);
+    }
+
+    &:active {
+      transform: scale(1.05);
+      filter: brightness(1.4) contrast(1.1) drop-shadow(0 2px 3px rgba(0, 0, 0, 0.4));
+    }
+}
+
+.info-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    h1 {
+      margin: 0;
+      padding: 20px 0;
+      font-size: 36px;
+      color: #e0e0e0;
+      text-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    h2 {
+      margin-top: -20px;
+      padding: 20px 0;
+      font-size: 32px;
+      color: #e0e0e0;
+      text-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);
+    }
+}
+
+.faq-section {
+    width: 90%;
+    max-width: 1400px;
+    margin: 2rem auto;
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.4);
+
+    h2 {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+        color: $text-color;
+        text-align: center;
+    }
+}
+
+// FAQ Item styling with hover and responsive adjustments
+.faq-item {
+    border-radius: 4px;
+    margin: 1px 0;
+    background-color: $card-background;
+    color: $text-color;
+
+    .faq-question {
+        font-weight: bold;
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+        color: $accent-color;
+        text-shadow: 0 5px 3px rgba(0, 0, 0, 0.5);
+        align-items: center;
+        justify-content: center;
+        transition: background-color 0.3s ease, transform 0.2s ease-in-out;
+
+        > .open-arrow {
+            margin: 0 5px;
+        }
+
+        &:hover {
+            transform: translateY(-3px);
+        }
+    }
+
+    .faq-answer {
+        font-size: 18px;
+        color: $muted-text-color;
+        line-height: 1.5;
+
+        ul {
+            padding-left: 1.2rem;
+            list-style-type: disc;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .info-header {
+        padding: 1rem;
+
+        h1 {
+            font-size: 2rem;
+        }
+
+        p {
+            font-size: 1rem;
+        }
+    }
+
+    .faq-section {
+        padding: 1rem;
+        margin: 1rem auto;
+    }
+
+    .faq-item {
+        padding: 0.8rem;
+
+        .faq-question {
+            font-size: 1.1rem;
+        }
+
+        .faq-answer {
+            font-size: 0.9rem;
+        }
+    }
+}

@@ -1,0 +1,93 @@
+.project {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: linear-gradient(145deg, $card-background, #242424);
+    margin: 2px 4px;
+    padding: 12px;
+    border-radius: 8px;
+    box-shadow: 0 0 8px 4px rgba(0, 0, 0, 0.2);
+    color: $text-color;
+    transition: background 0.3s, transform 0.2s;
+
+    &:hover {
+        background: linear-gradient(145deg, #242424, $card-background);
+        transform: scale(1.02);
+    }
+
+    .project-name {
+        text-shadow: 0 3px 4px black;
+        margin: 2px;
+    }
+
+    .stars {
+        flex-shrink: 0;
+    }
+
+    .stars,
+    .topics {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .row {
+        margin: 4px 0;
+    }
+
+    .info-row {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+
+        .star {
+            width: 22px;
+            height: 22px;
+            filter: brightness(1.2);
+        }
+
+        .count {
+            color: $highlight-color;
+        }
+
+        .language {
+            color: $muted-text-color;
+            font-size: 0.9rem;
+        }
+    }
+
+    .topics {
+        flex-grow: 1;
+        margin: 0.5rem 0;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .topic {
+        background-color: $primary-color;
+        color: $text-color;
+        padding: 6px 10px;
+        margin: 0 6px 6px 0;
+        border-radius: 4px;
+        font-size: 0.85rem;
+        font-weight: bold;
+        transition: background 0.3s;
+
+        &:hover {
+            background-color: $button-hover;
+        }
+
+        overflow-wrap: anywhere;
+    }
+
+    .project-buttons {
+        display: flex;
+        gap: 8px;
+        margin-top: auto;
+        flex-shrink: 0;
+
+        button {
+            flex-shrink: 0;
+        }
+    }
+}
