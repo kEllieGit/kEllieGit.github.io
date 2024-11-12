@@ -1,3 +1,11 @@
+.projects {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(300px, 1fr));
+    gap: 20px;
+    width: 95%;
+    margin-top: 20px;
+}
+
 .project {
     display: flex;
     flex-direction: column;
