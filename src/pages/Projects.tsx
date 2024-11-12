@@ -42,7 +42,6 @@ const Projects: React.FC = () => {
   return (
     <div className='info-header'>
       <h1>Projects</h1>
-      <p>Below is the list of all of my noteworthy projects.</p>
       <input
         type='text'
         placeholder='Search by topics or language...'
