@@ -4,10 +4,10 @@ import SocialIcon from '../components/SocialIcon';
 
 const Home: React.FC = () => {
   const socialLinks = [
-    { src: 'youtube.svg', alt: 'Youtube', link: 'https://youtube.com/@kEllieDev' },
-    { src: 'twitch.svg', alt: 'Twitch', link: 'https://twitch.tv/kEllieDev' },
-    { src: 'bluesky.svg', alt: 'Bluesky', link: 'https://bsky.app/profile/kelliedev.bsky.social', className: 'icon--bluesky' },
-    { src: 'discord.svg', alt: 'Discord', link: 'https://discord.gg/kKU6a4AYNk' },
+    { src: '/images/youtube.svg', alt: 'Youtube', link: 'https://youtube.com/@kEllieDev' },
+    { src: '/images/twitch.svg', alt: 'Twitch', link: 'https://twitch.tv/kEllieDev' },
+    { src: '/images/bluesky.svg', alt: 'Bluesky', link: 'https://bsky.app/profile/kelliedev.bsky.social', className: 'icon--bluesky' },
+    { src: '/images/discord.svg', alt: 'Discord', link: 'https://discord.gg/kKU6a4AYNk' },
   ];
 
   return (

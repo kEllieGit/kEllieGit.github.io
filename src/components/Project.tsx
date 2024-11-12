@@ -143,7 +143,7 @@ const Project: React.FC<{ name: ProjectEnum }> = memo(({ name }) => {
             <div className='row'>
                 <div className='info-row'>
                     <div className='stars'>
-                        <img className='star' src='star.svg' alt='Stars' />
+                        <img className='star' src='/images/star.svg' alt='Stars' />
                         <p className='count'>{project.stargazers_count ?? 0}</p>
                     </div>
                     <p className='language'>{project.language}</p>
