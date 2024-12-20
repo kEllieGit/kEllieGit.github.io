@@ -53,7 +53,12 @@ export interface GitHubRepository {
  * Check the remaining rate limit
 */
 export const checkRateLimit = async () => {
-    const response = await fetch(`https://api.github.com/rate_limit`);
-    const rateLimitData = await response.json();
-    return rateLimitData.rate.remaining;
+    try {
+        const response = await fetch(`https://api.github.com/rate_limit`);
+        const data = await response.json();
+        return data.rate.remaining;
+    } catch (error) {
+        console.warn("Rate limit check failed:", error);
+        return 60;
+    }
 };

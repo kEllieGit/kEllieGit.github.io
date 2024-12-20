@@ -1,5 +1,5 @@
 import React, { useState, useEffect, memo } from 'react';
-import { GitHubRepository } from '../util/Github';
+import { checkRateLimit, GitHubRepository } from '../util/Github';
 
 export enum ProjectEnum {
     vnbase = 'SBox-Visual-Novel-Base',
@@ -20,17 +20,6 @@ const isValidRepositoryData = (data: any): boolean => {
     return data && data.id && data.name && data.html_url;
 };
 
-/** Fetches rate limit status */
-const checkRateLimit = async () => {
-    try {
-        const response = await fetch(`https://api.github.com/rate_limit`);
-        const data = await response.json();
-        return data.rate.remaining;
-    } catch (error) {
-        console.warn("Rate limit check failed:", error);
-        return 60; // Assume max requests if check fails
-    }
-};
 
 const calculateDelay = (remainingRequests: number) => {
     if (remainingRequests > 10) return 0;
