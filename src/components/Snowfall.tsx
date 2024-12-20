@@ -2,13 +2,6 @@ import React from 'react';
 import Snowfall from 'react-snowfall';
 
 const SnowfallEffect: React.FC = () => {
-  const currentMonth = new Date().getMonth() + 1; // JavaScript months are 0-11
-
-  // Show snowfall only in December
-  if (currentMonth !== 12) {
-    return null;
-  }
-
   return (
     <Snowfall
       color="white"

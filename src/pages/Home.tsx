@@ -1,7 +1,6 @@
 import React from 'react';
 import Profile from '../components/Profile';
 import SocialIcon from '../components/SocialIcon';
-import SnowfallEffect from '../components/Snowfall';
 
 const Home: React.FC = () => {
   const socialLinks = [
@@ -14,7 +13,6 @@ const Home: React.FC = () => {
 
   return (
     <div className='center-layout'>
-      <SnowfallEffect />
       <Profile username='kEllieGit' />
       <div className='layout'>
         <div>
