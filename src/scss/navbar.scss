@@ -6,7 +6,7 @@ nav {
 
     a {
         color: #f0f0f0;
-        font-size: 28px;
+        font-size: 38px;
         text-decoration: none;
         text-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);
         transition: color 0.3s ease, text-shadow 0.3s ease;
@@ -17,7 +17,7 @@ nav {
         }
     }
 
-    >ul {
+    > ul {
         display: flex;
         list-style-type: none;
         gap: 2rem;

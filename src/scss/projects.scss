@@ -23,7 +23,7 @@
     border-radius: 8px;
     box-shadow: 0 0 8px 4px rgba(0, 0, 0, 0.2);
     color: $text-color;
-    transition: background 0.3s, transform 0.2s;
+    transition: transform 0.2s;
 
     &:hover {
         background: linear-gradient(145deg, #242424, $card-background);
@@ -88,7 +88,6 @@
         border-radius: 4px;
         font-size: 0.85rem;
         font-weight: bold;
-        transition: background 0.3s;
 
         &:hover {
             background-color: $button-hover;

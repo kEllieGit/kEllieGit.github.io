@@ -1,10 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Copyright from './components/Copyright';
 import SeasonManager from './components/SeasonManager';
 import Home from './pages/Home';
+import Blogs from './pages/Blogs';
+import BlogPost from './pages/BlogPost';
+import NotFound from './pages/NotFound';
 import './styles.scss';
 
 const rootElement = document.getElementById('root');
@@ -14,7 +17,13 @@ if (rootElement) {
     root.render(
         <Router>
             <SeasonManager />
-            <Home />
+            <Navbar />
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/blog" element={<Blogs />} />
+                <Route path="/blog/:slug" element={<BlogPost />} />
+                <Route path="*" element={<NotFound />} />
+            </Routes>
             <Copyright />
         </Router>
     );
