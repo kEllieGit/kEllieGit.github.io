@@ -54,8 +54,8 @@ const BlogPost: React.FC = () => {
           <ReactMarkdown>{post.content}</ReactMarkdown>
         </div>
       </article>
-      <Link to='/blog' className='select-button'>Back</Link>
       <button onClick={handleShare}>Share</button>
+      <Link to='/blog' className='select-button'>Back</Link>
     </div>
   );
 };
