@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { blogIndex } from './Blogs';
 import { useParams, Link } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
+import { blogIndex } from './Blogs';
+import { FaShare, FaAngleLeft } from "react-icons/fa";
 
 const BlogPost: React.FC = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -54,8 +55,8 @@ const BlogPost: React.FC = () => {
           <ReactMarkdown>{post.content}</ReactMarkdown>
         </div>
       </article>
-      <button onClick={handleShare}>Share</button>
-      <Link to='/blog' className='select-button'>Back</Link>
+      <button onClick={handleShare}><FaShare className='icon'/>Share</button>
+      <Link to='/blog' className='select-button'><FaAngleLeft className='icon'/>Back</Link>
     </div>
   );
 };

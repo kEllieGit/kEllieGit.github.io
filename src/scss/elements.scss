@@ -3,6 +3,7 @@
 */
 
 button {
+    display: flex;
     font-size: 1.5rem;
     margin-top: 10px;
     padding: 0.5rem 1rem;
@@ -11,8 +12,17 @@ button {
     color: white;
     border-radius: 5px;
     border: none;
-    text-align: center;
+    justify-content: center;
+    align-items: center;
     transition: background-color 0.3s ease, color 0.3s ease;
+
+    > .icon {
+        pointer-events: none;
+        width: 25px;
+        height: 25px;
+        margin-right: 5px;
+        filter: none;
+    }
 
     &:not(.disabled)
     {
@@ -31,15 +41,25 @@ button {
 }
 
 .select-button {
+    display: flex;
     font-size: 1.5rem;
     margin-top: 10px;
     padding: 0.5rem 1rem;
     background-color: lighten(#004b77, 15%);
     text-decoration: none;
-    text-align: center;
+    justify-content: center;
+    align-items: center;
     color: white;
     border-radius: 5px;
     transition: background-color 0.3s ease, color 0.3s ease;
+
+    > .icon {
+        pointer-events: none;
+        width: 25px;
+        height: 25px;
+        margin-right: 5px;
+        filter: none;
+    }
 
     &:not(.disabled)
     {
