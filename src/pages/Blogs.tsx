@@ -43,7 +43,7 @@ const BlogList: React.FC = () => {
     <div className='blogs'>
       <div className='posts'>
         {posts.map((post) => (
-          <article key={post.filename} className='blog-post-card'>
+          <a key={post.filename} className='blog-post-card' href={`/#/blog/${post.filename.replace('.md', '')}`}>
             <div className='post-header'>
               <h2 className="post-title">
                 {post.title}
@@ -55,12 +55,7 @@ const BlogList: React.FC = () => {
             <div className='post-preview'>
               {getPreview(post.content)}
             </div>
-            <div className='post-buttons'>
-              <a className='select-button' href={`/#/blog/${post.filename.replace('.md', '')}`}>
-                Read More
-              </a>
-            </div>
-          </article>
+          </a>
         ))}
       </div>
     </div>
