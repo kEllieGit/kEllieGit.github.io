@@ -5,15 +5,14 @@ export interface Project {
     techstack?: string[];
     organization?: string;
     releaseDate?: string;
-    repository?: string;
-    links?: { [key: string]: URL };
+    links?: { [key: string]: string };
 }
 
 import React from 'react';
 
-const ProjectCard: React.FC<Project> = ({ title, description, image, techstack, organization, releaseDate, repository, links }) => {
+const ProjectCard: React.FC<Project> = ({ title, description, image, techstack, organization, releaseDate, links }) => {
     return (
-        <div className={`project-card ${repository ? 'clickable' : ''}`} onClick={() => repository && window.open(repository, '_blank')}>
+        <div className='project-card'>
             {image && (
                 <div className='project-image'>
                     <img src={image} alt={title} />
@@ -35,7 +34,7 @@ const ProjectCard: React.FC<Project> = ({ title, description, image, techstack, 
                 {links && (
                     <div className='project-links'>
                         {Object.entries(links).map(([key, value]) => (
-                            <a className='select-button' key={key} href='value'>{key}</a>
+                            <a className='select-button' key={key} href={value}>{key}</a>
                         ))}
                     </div>
                 )}

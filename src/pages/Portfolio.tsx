@@ -5,28 +5,38 @@ import { Tooltip } from 'react-tooltip';
 
 const projects: Project[] = [
     {
+        title: 'Personal Website',
+        description: 'My personal website built with React.',
+        techstack: ['Typescript', 'React'],
+        links: {
+            'Repository': 'https://github.com/kEllieGit/kEllieGit.github.io'
+        }
+    },
+    {
         title: 'VNBase',
         description: 'VNBase is a library for creating visual novels or dialogue systems in S&Box.',
         techstack: ['C#', 'S&Box'],
-        repository: 'https://github.com/kelliegit/sbox-visual-novel-base',
+        links: {
+            'Repository': 'https://github.com/kelliegit/sbox-visual-novel-base'
+        }
     },
     {
         title: 'VNScript',
         description: 'VSCode LSP extension for VNBase VNScript files.',
         techstack: ['Typescript', 'Node.js'],
-        repository: 'https://github.com/kelliegit/vnscript'
-    },
-    {
-        title: 'Personal Website',
-        description: 'My personal website built with React.',
-        techstack: ['Typescript', 'React'],
-        repository: 'https://github.com/kEllieGit/kEllieGit.github.io'
+        links: {
+            'Marketplace': 'https://marketplace.visualstudio.com/items?itemName=kEllie.vnscript',
+            'Repository': 'https://github.com/kelliegit/vnscript'
+        }
     },
     {
         title: 'Observation',
-        description: 'An Im On Observation Duty clone made in S&Box.',
+        description: 'An I\'m On Observation Duty clone made in S&Box.',
         techstack: ['C#', 'S&Box'],
-        repository: 'https://github.com/kEllieGit/SBox-Observation'
+        links: {
+            'Play Game': 'https://sbox.game/spoonstuff/observation',
+            'Repository': 'https://github.com/kEllieGit/SBox-Observation'
+        }
     }
 ];
 
