@@ -15,10 +15,8 @@ const Home: React.FC = () => {
     <div className='center-layout'>
       <Profile username='kEllieGit' />
       <div className='layout'>
-        <div>
-          <h1>Full Stack Software & Video Game Developer</h1>
-          <h2>Part of <a className='text-highlight' href='https://apetavern.com'>Ape Tavern</a></h2>
-        </div>
+        <h1>Full Stack Software & Video Game Developer</h1>
+        <h2>Part of <a className='text-highlight' href='https://apetavern.com'>Ape Tavern</a></h2>
         <div className='socials'>
           {socialLinks.map((social, index) => (
             <SocialIcon key={index} src={social.src} alt={social.alt} link={social.link} className={social.className} />

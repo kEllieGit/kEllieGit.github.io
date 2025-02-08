@@ -11,13 +11,16 @@ nav {
         text-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);
         transition: color 0.3s ease, text-shadow 0.3s ease;
 
+        &.active-page {
+            color: $highlight-color;
+        }
+
         &:hover {
             color: $highlight-color;
-            text-shadow: 0 0 8px $highlight-color;
         }
     }
 
-    > ul {
+    >ul {
         display: flex;
         list-style-type: none;
         gap: 2rem;

@@ -20,7 +20,6 @@
 .blog-post-card {
     width: 90%;
     border-radius: 4px;
-    border: 2px solid #004b77;
     padding: 1.25rem;
     color: white;
     background-color: #004b77;
@@ -30,7 +29,6 @@
 
     &:hover {
         background-color: #00385e;
-        border-color: #00385e;
     }
 
     .post-header {
@@ -45,7 +43,7 @@
             margin: 0;
             border-bottom: 2px solid white;
         }
-    
+
         .post-date {
             font-size: 24px;
         }
@@ -111,6 +109,10 @@
 
         li {
             margin: 8px 0;
+        }
+
+        a {
+            color: $highlight-color;
         }
     }
 }

@@ -58,7 +58,7 @@ const Profile: React.FC<{ username: string }> = ({ username }) => {
   return (
     <div className="profile">
       <div className="row">
-      <img className="profile-avatar" src={user?.avatar_url} alt={`${user?.login}'s avatar`} />
+        <img className="profile-avatar" src={user?.avatar_url} alt={`${user?.login}'s avatar`} />
         <h2 className="profile-name">{user?.name || user?.login}</h2>
       </div>
     </div>

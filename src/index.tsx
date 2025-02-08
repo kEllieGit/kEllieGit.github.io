@@ -7,6 +7,7 @@ import SeasonManager from './components/SeasonManager';
 import Home from './pages/Home';
 import Blogs from './pages/Blogs';
 import BlogPost from './pages/BlogPost';
+import Portfolio from './pages/Portfolio';
 import NotFound from './pages/NotFound';
 import './styles.scss';
 
@@ -22,6 +23,7 @@ if (rootElement) {
                 <Route path="/" element={<Home />} />
                 <Route path="/blog" element={<Blogs />} />
                 <Route path="/blog/:slug" element={<BlogPost />} />
+                <Route path="/portfolio" element={<Portfolio />} />
                 <Route path="*" element={<NotFound />} />
             </Routes>
             <Copyright />

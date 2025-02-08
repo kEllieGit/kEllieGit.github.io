@@ -1,15 +1,20 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 
 const Navbar: React.FC = () => {
+  const location = useLocation();
+
   return (
     <nav>
       <ul>
         <li>
-          <Link to="/">Home</Link>
+          <NavLink to="/" className={({ isActive }) => (isActive ? 'active-page' : '')}>Home</NavLink>
         </li>
         <li>
-          <Link to="/blog">Blog</Link>
+          <NavLink to="/portfolio" className={({ isActive }) => (isActive ? 'active-page' : '')}>Projects</NavLink>
+        </li>
+        <li>
+          <NavLink to="/blog" className={({ isActive }) => (isActive ? 'active-page' : '')}>Blog</NavLink>
         </li>
       </ul>
     </nav>

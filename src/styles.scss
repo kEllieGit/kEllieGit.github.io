@@ -1,9 +1,8 @@
 @import "./scss/colors.scss";
 @import "./scss/profile.scss";
-@import "./scss/projects.scss";
-@import "./scss/faq.scss";
 @import "./scss/elements.scss";
 @import "./scss/navbar.scss";
+@import "./scss/portfolio.scss";
 @import "./scss/blog.scss";
 
 body {
@@ -19,7 +18,7 @@ body {
     align-items: center;
     text-align: center;
 
-    h1 {
+    >h1 {
       margin: 0;
       padding: 20px 0;
       font-size: 36px;
@@ -27,7 +26,7 @@ body {
       text-shadow: 0 4px 2px black;
     }
 
-    h2 {
+    >h2 {
       margin-top: -20px;
       padding: 20px 0;
       font-size: 32px;
