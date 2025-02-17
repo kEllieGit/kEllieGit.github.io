@@ -13,6 +13,14 @@ const projects: Project[] = [
         }
     },
     {
+        title: 'ServerBot',
+        description: 'A discord bot built on discord.js, connecting to a PostgreSQL database. Features a leveling system, users and more.',
+        techstack: ['Typescript', 'Node.js', 'discord.js', 'PostgreSQL', 'Prisma'],
+        links: {
+            'Repository': 'https://github.com/kEllieGit/ServerBot'
+        }
+    },
+    {
         title: 'VNBase',
         description: 'VNBase is a library for creating visual novels or dialogue systems in S&Box.',
         techstack: ['C#', 'S&Box'],
