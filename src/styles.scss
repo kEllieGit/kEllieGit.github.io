@@ -6,46 +6,46 @@
 @import "./scss/blog.scss";
 
 body {
-  margin: 0;
-  padding: 0;
-  color: #f0f0f0;
-  background-color: $background-color;
-  font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+	color: #f0f0f0;
+	background-color: $background-color;
+	font-family: Arial, sans-serif;
 
-  .layout {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+	.layout {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
 
-    >h1 {
-      margin: 0;
-      padding: 20px 0;
-      font-size: 36px;
-      color: #e0e0e0;
-      text-shadow: 0 4px 2px black;
-    }
+		>h1 {
+			margin: 0;
+			padding: 20px 0;
+			font-size: 36px;
+			color: #e0e0e0;
+			text-shadow: 0 4px 2px black;
+		}
 
-    >h2 {
-      margin-top: -20px;
-      padding: 20px 0;
-      font-size: 32px;
-      color: #e0e0e0;
-      text-shadow: 0 4px 2px black;
-    }
-  }
+		>h2 {
+			margin-top: -20px;
+			padding: 20px 0;
+			font-size: 32px;
+			color: #e0e0e0;
+			text-shadow: 0 4px 2px black;
+		}
+	}
 
-  .center-layout {
-    display: flex;
-    width: 100%;
-    height: 85vh;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-  }
+	.center-layout {
+		display: flex;
+		width: 100%;
+		height: 85vh;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+	}
 
-  .text-highlight {
-    color: $highlight-color;
-    text-shadow: 0 0 8px $highlight-color;
-  }
+	.text-highlight {
+		color: $highlight-color;
+		text-shadow: 0 0 8px $highlight-color;
+	}
 }

@@ -6,7 +6,7 @@
     justify-content: center;
     text-align: center;
 
-    .row {
+    >.row {
         align-items: center;
     }
 
@@ -22,6 +22,6 @@
         font-size: 50px;
         font-weight: bold;
         text-shadow: 0 4px 2px black;
-        margin: 0.5rem;
+        margin: 0 0.5rem;
     }
 }

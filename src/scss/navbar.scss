@@ -13,10 +13,12 @@ nav {
 
         &.active-page {
             color: $highlight-color;
+            text-shadow: 0 0 8px $highlight-color;
         }
 
         &:hover {
             color: $highlight-color;
+            text-shadow: 0 0 8px $highlight-color;
         }
     }
 
