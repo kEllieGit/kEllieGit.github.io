@@ -1,15 +1,17 @@
-import React from 'react';
+import React, { Suspense, lazy } from 'react';
 import ReactDOM from 'react-dom/client';
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
-import Navbar from './components/Navbar';
-import Copyright from './components/Copyright';
-import SeasonManager from './components/SeasonManager';
-import Home from './pages/Home';
-import Blogs from './pages/Blogs';
-import BlogPost from './pages/BlogPost';
-import Portfolio from './pages/Portfolio';
-import NotFound from './pages/NotFound';
 import './styles.scss';
+
+const Navbar = lazy(() => import('./components/Navbar'));
+const Copyright = lazy(() => import('./components/Copyright'));
+const SeasonManager = lazy(() => import('./components/SeasonManager'));
+const Home = lazy(() => import('./pages/Home'));
+const Blogs = lazy(() => import('./pages/Blogs'));
+const BlogPost = lazy(() => import('./pages/BlogPost'));
+const Portfolio = lazy(() => import('./pages/Portfolio'));
+const NotFound = lazy(() => import('./pages/NotFound'));
+const Loading = () => <div className="loading">Loading...</div>;
 
 const rootElement = document.getElementById('root');
 
@@ -18,15 +20,17 @@ if (rootElement) {
     root.render(
         <Router>
             <SeasonManager />
-            <Navbar />
-            <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/blog" element={<Blogs />} />
-                <Route path="/blog/:slug" element={<BlogPost />} />
-                <Route path="/portfolio" element={<Portfolio />} />
-                <Route path="*" element={<NotFound />} />
-            </Routes>
-            <Copyright />
+            <Suspense fallback={<Loading />}>
+                <Navbar />
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/blog" element={<Blogs />} />
+                    <Route path="/blog/:slug" element={<BlogPost />} />
+                    <Route path="/portfolio" element={<Portfolio />} />
+                    <Route path="*" element={<NotFound />} />
+                </Routes>
+                <Copyright />
+            </Suspense>
         </Router>
     );
 }
