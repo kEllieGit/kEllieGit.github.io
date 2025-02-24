@@ -7,9 +7,10 @@ module.exports = {
   mode: 'production',
   entry: './src/index.tsx',
   output: {
-    filename: 'bundle.js',
     path: path.resolve(__dirname, 'build'),
-    publicPath: '/',
+    filename: '[name].[contenthash].js',
+    chunkFilename: '[name].[contenthash].chunk.js',
+    clean: true
   },
   resolve: {
     extensions: ['.tsx', '.ts', '.js']
@@ -49,5 +50,32 @@ module.exports = {
         },
       ],
     }),
-  ]
+  ],
+  optimization: {
+    runtimeChunk: 'single',
+    splitChunks: {
+      chunks: 'all',
+      maxInitialRequests: Infinity,
+      minSize: 0,
+      cacheGroups: {
+        vendor: {
+          test: /[\\/]node_modules[\\/]/,
+          name(module) {
+            const packageName = module.context.match(/[\\/]node_modules[\\/](.*?)([\\/]|$)/)[1];
+            return `vendor.${packageName.replace('@', '')}`;
+          }
+        },
+        components: {
+          test: /[\\/]components[\\/]/,
+          name: 'components',
+          enforce: true
+        },
+        pages: {
+          test: /[\\/]pages[\\/]/,
+          name: 'pages',
+          enforce: true
+        }
+      }
+    }
+  },
 };
