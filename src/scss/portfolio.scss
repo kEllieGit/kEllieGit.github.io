@@ -6,7 +6,7 @@ $shadow-medium: rgba(0, 0, 0, 0.15);
 .project-card {
 	display: flex;
 	width: 90%;
-	border-radius: 0.5rem;
+	border-radius: 4px;
 	color: $text-color;
 	background-color: $primary-color;
 	box-shadow: 0 2px 2px black;
