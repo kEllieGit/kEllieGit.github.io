@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { GitHubUser } from '../util/Github';
 
 const userCache: Record<string, GitHubUser> = {};
 
