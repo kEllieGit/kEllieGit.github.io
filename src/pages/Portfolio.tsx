@@ -51,7 +51,6 @@ const projects: Project[] = [
 const Portfolio: React.FC = () => {
     return (
         <div className='layout'>
-            <h1>Projects</h1>
             <div className='container projects'>
                 {projects.map((project, index) => (
                     <ProjectCard key={index} {...project} />

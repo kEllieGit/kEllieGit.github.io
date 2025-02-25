@@ -51,7 +51,7 @@ const BlogList: React.FC = () => {
 
   return (
     <div className='layout'>
-      <div className='blogs'>
+      <div className='container blogs'>
         <div className='posts'>
           {posts.map((post) => (
             <a key={post.filename} className='blog-post-card' href={`/#/blog/${post.filename.replace('.md', '')}`}>
