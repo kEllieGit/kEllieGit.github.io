@@ -1,4 +1,4 @@
-interface Project {
+export interface Project {
     title: string;
     description: string;
     image?: string;
@@ -34,7 +34,7 @@ const ProjectCard: React.FC<Project> = ({ title, description, image, techstack, 
                 {links && (
                     <div className='project-links'>
                         {Object.entries(links).map(([key, value]) => (
-                            <a className='select-button' key={key} href={value}>{key}</a>
+                            <a className='button' key={key} href={value}>{key}</a>
                         ))}
                     </div>
                 )}
