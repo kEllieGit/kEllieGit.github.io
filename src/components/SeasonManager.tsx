@@ -3,59 +3,59 @@ import SnowfallEffect from './Snowfall';
 import { useLocation } from "react-router-dom";
 
 export const SeasonManager: React.FC = () => {
-    const location = useLocation();
-    
-    enum Season {
-        Spring,
-        Summer,
-        Fall,
-        Winter
-    }
+	const location = useLocation();
 
-    /**
-    * Returns the currently active season.
-    */
-    const getSeason = (): Season => {
-        const month = new Date().getMonth();
+	enum Season {
+		Spring,
+		Summer,
+		Fall,
+		Winter
+	}
 
-        switch (true) {
-            case month >= 2 && month <= 4:
-                return Season.Spring;
-            case month >= 5 && month <= 7:
-                return Season.Summer;
-            case month >= 8 && month <= 10:
-                return Season.Fall;
-            default:
-                return Season.Winter;
-        }
-    };
+	/**
+	* Returns the currently active season.
+	*/
+	const getSeason = (): Season => {
+		const month = new Date().getMonth();
 
-    const season: Season = getSeason();
+		switch (true) {
+			case month >= 2 && month <= 4:
+				return Season.Spring;
+			case month >= 5 && month <= 7:
+				return Season.Summer;
+			case month >= 8 && month <= 10:
+				return Season.Fall;
+			default:
+				return Season.Winter;
+		}
+	};
 
-    // Pages where seasonal effects shouldn't play.
-    const excludedPaths = ['/about', '/contact', '/projects'];
+	const season: Season = getSeason();
 
-    // Check if the current path is excluded
-    const isExcluded = excludedPaths.includes(location.pathname);
+	// Pages where seasonal effects shouldn't play.
+	const excludedPaths = ['/about', '/contact', '/projects'];
 
-    const getSeasonContent = () => {
-        if (isExcluded) {
-            return <></>;
-        }
+	// Check if the current path is excluded
+	const isExcluded = excludedPaths.includes(location.pathname);
 
-        switch (season) {
-            case Season.Winter:
-                return <SnowfallEffect />;
-            default:
-                return <></>;
-        }
-    };
+	const getSeasonContent = () => {
+		if (isExcluded) {
+			return <></>;
+		}
 
-    return (
-        <div>
-            {getSeasonContent()}
-        </div>
-    );
+		switch (season) {
+			case Season.Winter:
+				return <SnowfallEffect />;
+			default:
+				return <></>;
+		}
+	};
+
+	return (
+		<div>
+			{getSeasonContent()}
+		</div>
+	);
 };
 
 export default SeasonManager;

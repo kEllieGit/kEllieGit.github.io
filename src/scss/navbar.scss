@@ -1,36 +1,36 @@
 nav {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 20px 0;
 
-    a {
-        color: #f0f0f0;
-        font-size: 38px;
-        text-decoration: none;
-        text-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);
-        transition: color 0.3s ease, text-shadow 0.3s ease;
+	a {
+		color: #f0f0f0;
+		font-size: 38px;
+		text-decoration: none;
+		text-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);
+		transition: color 0.3s ease, text-shadow 0.3s ease;
 
-        &.active-page {
-            color: $highlight-color;
-            text-shadow: 0 0 8px $highlight-color;
-        }
+		&.active-page {
+			color: $highlight-color;
+			text-shadow: 0 0 8px $highlight-color;
+		}
 
-        &:hover {
-            color: $highlight-color;
-            text-shadow: 0 0 8px $highlight-color;
-        }
-    }
+		&:hover {
+			color: $highlight-color;
+			text-shadow: 0 0 8px $highlight-color;
+		}
+	}
 
-    >ul {
-        display: flex;
-        list-style-type: none;
-        gap: 2rem;
-        padding: 0;
-        margin: 0;
+	>ul {
+		display: flex;
+		list-style-type: none;
+		gap: 2rem;
+		padding: 0;
+		margin: 0;
 
-        >li {
-            font-size: 20px;
-        }
-    }
+		>li {
+			font-size: 20px;
+		}
+	}
 }
