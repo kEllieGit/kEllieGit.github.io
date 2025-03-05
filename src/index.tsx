@@ -11,7 +11,7 @@ const Blogs = lazy(() => import('./pages/Blogs'));
 const BlogPost = lazy(() => import('./pages/BlogPost'));
 const Portfolio = lazy(() => import('./pages/Portfolio'));
 const NotFound = lazy(() => import('./pages/NotFound'));
-const Loading = () => <div className="loading">Loading...</div>;
+const Loading = lazy(() => import('./components/Loading'));
 
 const rootElement = document.getElementById('root');
 

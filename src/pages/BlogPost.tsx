@@ -3,6 +3,7 @@ import ReactMarkdown from 'react-markdown';
 import { useParams, Link } from 'react-router-dom';
 import { blogIndex } from './Blogs';
 import { FaShare, FaAngleLeft } from "react-icons/fa";
+import Loading from '../components/Loading';
 
 const BlogPost: React.FC = () => {
 	const { slug } = useParams<{ slug: string }>();
@@ -41,7 +42,7 @@ const BlogPost: React.FC = () => {
 		}
 	};
 
-	if (loading) return <div>Loading...</div>;
+	if (loading) return <Loading/>;
 	if (!post) return <div>Post not found</div>;
 
 	return (
