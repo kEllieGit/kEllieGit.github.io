@@ -46,7 +46,16 @@ button {
 
 .socials {
 	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
 	gap: 20px;
+}
+
+.skills {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 10px;
 }
 
 .copyright {
@@ -112,5 +121,11 @@ button {
 		outline: none;
 		border-color: #b22fbe;
 		box-shadow: 0 4px 8px rgba(178, 47, 190, 0.5);
+	}
+}
+
+@media (max-width: 720px) {
+	.socials {
+		max-width: 500px;
 	}
 }

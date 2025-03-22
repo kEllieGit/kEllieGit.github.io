@@ -34,3 +34,29 @@ nav {
 		}
 	}
 }
+
+@media (max-width: 720px) {
+    nav {
+        flex-direction: column;
+        padding: 10px 0;
+
+        a {
+            font-size: 40px;
+            width: 100%;
+            text-align: center;
+            display: block;
+        }
+
+        >ul {
+            flex-direction: column;
+            gap: 0.5rem;
+            align-items: stretch;
+            width: 100%;
+        }
+
+        >ul >li {
+            font-size: 18px;
+            width: 100%;
+        }
+    }
+}

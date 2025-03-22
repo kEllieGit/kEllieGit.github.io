@@ -108,3 +108,17 @@
 		}
 	}
 }
+
+@media (max-width: 600px) {
+    .blog-post-card {
+		.post-header {
+			flex-direction: column;
+			gap: 5px;
+			overflow: hidden;
+		}
+
+		.post-title {
+			font-size: 24px !important;
+		}
+	}
+}

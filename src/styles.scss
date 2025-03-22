@@ -19,34 +19,6 @@ body {
 		gap: 1.5rem;
 		flex-direction: column;
 		align-items: center;
-	
-		.skill-container {
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			flex-direction: column;
-			width: 100%;
-		}
-	
-		.icon-container {
-			display: flex;
-			gap: 1.5rem;
-			flex-wrap: wrap;
-			justify-content: center;
-			align-items: center;
-	
-			> img {
-				width: 75px;
-				height: 75px;
-				filter: drop-shadow(0 4px 1px black);
-				transition: all 0.2s ease;
-	
-				&:hover {
-					transform: translateY(-5px);
-					filter: drop-shadow(0 4px 1px black);
-				}
-			}
-		}
 	}
 
 	.layout {
@@ -54,6 +26,8 @@ body {
 		align-items: center;
 		text-align: center;
 		flex-direction: column;
+		padding: 0 10px;
+		gap: 20px;
 
 		* {
 			box-sizing: border-box;
@@ -62,7 +36,6 @@ body {
 
 		>h1 {
 			margin: 0;
-			padding: 20px 0;
 			font-size: 36px;
 			color: #e0e0e0;
 			text-shadow: 0 4px 2px black;
@@ -89,5 +62,19 @@ body {
 	.text-highlight {
 		color: $highlight-color;
 		text-shadow: 0 0 8px $highlight-color;
+	}
+}
+
+@media (max-width: 768px) {
+	body {
+		.layout {
+			>h1 {
+				font-size: 24px;
+			}
+
+			>h2 {
+				font-size: 20px;
+			}
+		}
 	}
 }
