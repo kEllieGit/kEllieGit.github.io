@@ -5,19 +5,16 @@ import { Tooltip } from 'react-tooltip';
 
 const projects: Project[] = [
 	{
+		title: 'ServerBot',
+		description: 'The backend for my various projects.',
+		techstack: ['Typescript', 'Discord.js', 'Node.js', 'WebSocket Server', 'PostgreSQL', 'Prisma']
+	},
+	{
 		title: 'Personal Website',
 		description: 'My personal website built with React.',
 		techstack: ['Typescript', 'React'],
 		links: {
 			'Repository': 'https://github.com/kEllieGit/kEllieGit.github.io'
-		}
-	},
-	{
-		title: 'ServerBot',
-		description: 'A discord bot built on discord.js, connecting to a PostgreSQL database. Features a leveling system, users and more.',
-		techstack: ['Typescript', 'Node.js', 'discord.js', 'PostgreSQL', 'Prisma'],
-		links: {
-			'Repository': 'https://github.com/kEllieGit/ServerBot'
 		}
 	},
 	{
