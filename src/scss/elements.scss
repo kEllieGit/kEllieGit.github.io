@@ -65,15 +65,16 @@ button {
 .copyright {
 	z-index: -1;
 	position: fixed;
-	pointer-events: none;
 	bottom: 0;
 	left: 20px;
 	color: #888;
-	font-size: 18px;
-	font-style: italic;
-	width: 100%;
-	text-align: left;
-	padding: 10px 0;
+	font-size: 16px;
+
+	a {
+		color: $highlight-color;
+		text-shadow: 0 0px 4px $highlight-color;
+		text-decoration: none;
+	}
 }
 
 .icon {
