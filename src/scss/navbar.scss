@@ -1,3 +1,5 @@
+@use "colors";
+
 nav {
 	display: flex;
 	align-items: center;
@@ -12,13 +14,13 @@ nav {
 		transition: color 0.3s ease, text-shadow 0.3s ease;
 
 		&.active-page {
-			color: $highlight-color;
-			text-shadow: 0 0 8px $highlight-color;
+			color: colors.$highlight-color;
+			text-shadow: 0 0 8px colors.$highlight-color;
 		}
 
 		&:hover {
-			color: $highlight-color;
-			text-shadow: 0 0 8px $highlight-color;
+			color: colors.$highlight-color;
+			text-shadow: 0 0 8px colors.$highlight-color;
 		}
 	}
 

@@ -1,15 +1,15 @@
-@import "./scss/colors.scss";
-@import "./scss/profile.scss";
-@import "./scss/elements.scss";
-@import "./scss/navbar.scss";
-@import "./scss/portfolio.scss";
-@import "./scss/blog.scss";
+@use "scss/colors.scss";
+@use "scss/profile.scss";
+@use "scss/elements.scss";
+@use "scss/navbar.scss";
+@use "scss/portfolio.scss";
+@use "scss/blog.scss";
 
 body {
 	margin: 0;
 	padding: 0;
 	color: #f0f0f0;
-	background-color: $background-color;
+	background-color: colors.$background-color;
 	font-family: Arial, sans-serif;
 
 	.container {
@@ -60,8 +60,8 @@ body {
 	}
 
 	.text-highlight {
-		color: $highlight-color;
-		text-shadow: 0 0 8px $highlight-color;
+		color: colors.$highlight-color;
+		text-shadow: 0 0 8px colors.$highlight-color;
 	}
 }
 

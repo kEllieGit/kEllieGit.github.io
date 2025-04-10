@@ -1,3 +1,6 @@
+@use "sass:color";
+@use "colors" as Colors;
+
 /*
     Contains styles for certain elements.
 */
@@ -8,7 +11,7 @@ button {
 	margin-top: 10px;
 	padding: 0.5rem 1rem;
 	color: white;
-	background-color: adjust-color(#004b77, $lightness: 15%);
+	background-color: color.adjust(#004b77, $lightness: 15%);
 	text-decoration: none;
 	border-radius: 5px;
 	border: none;
@@ -28,8 +31,8 @@ button {
 		cursor: pointer;
 
 		&:hover {
-			background-color: adjust-color(#004b77, $lightness: 25%);
-			color: adjust-color(white, $lightness: -10%);
+			background-color: color.adjust(#004b77, $lightness: 25%);
+			color: color.adjust(white, $lightness: -10%);
 		}
 	}
 }
@@ -71,8 +74,8 @@ button {
 	font-size: 16px;
 
 	a {
-		color: $highlight-color;
-		text-shadow: 0 0px 4px $highlight-color;
+		color: Colors.$highlight-color;
+		text-shadow: 0 0px 4px Colors.$highlight-color;
 		text-decoration: none;
 	}
 }
