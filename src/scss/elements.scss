@@ -1,5 +1,5 @@
 @use "sass:color";
-@use "colors" as Colors;
+@use "colors.scss";
 
 /*
     Contains styles for certain elements.
@@ -74,8 +74,8 @@ button {
 	font-size: 16px;
 
 	a {
-		color: Colors.$highlight-color;
-		text-shadow: 0 0px 4px Colors.$highlight-color;
+		color: colors.$highlight-color;
+		text-shadow: 0 0px 4px colors.$highlight-color;
 		text-decoration: none;
 	}
 }

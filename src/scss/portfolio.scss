@@ -1,5 +1,5 @@
 @use "sass:color";
-@use "Colors.scss";
+@use "colors.scss";
 
 $shadow-light: rgba(0, 0, 0, 0.1);
 $shadow-medium: rgba(0, 0, 0, 0.15);
@@ -8,8 +8,8 @@ $shadow-medium: rgba(0, 0, 0, 0.15);
 	display: flex;
 	width: 90%;
 	border-radius: 4px;
-	color: Colors.$text-color;
-	background-color: Colors.$primary-color;
+	color: colors.$text-color;
+	background-color: colors.$primary-color;
 	box-shadow: 0 2px 2px black;
 	padding: 1.5rem;
 	transition: all 0.3s ease;
@@ -57,8 +57,8 @@ $shadow-medium: rgba(0, 0, 0, 0.15);
 		.project-organization {
 			padding: 0.5rem 1rem;
 			border-radius: 0.5rem;
-			background-color: Colors.$primary-color;
-			color: Colors.$primary-color;
+			background-color: colors.$primary-color;
+			color: colors.$primary-color;
 			font-size: 0.875rem;
 			font-weight: 500;
 		}
@@ -71,9 +71,9 @@ $shadow-medium: rgba(0, 0, 0, 0.15);
 			span {
 				padding: 0.37rem 0.75rem;
 				border-radius: 0.25rem;
-				background-color: color.adjust(Colors.$primary-color, $lightness: 35%);
+				background-color: color.adjust(colors.$primary-color, $lightness: 35%);
 				box-shadow: 0 1px 1px black;
-				color: Colors.$highlight-color;
+				color: colors.$highlight-color;
 				font-size: 0.8rem;
 				font-weight: 500;
 			}
