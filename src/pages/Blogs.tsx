@@ -5,11 +5,6 @@ export const blogIndex = [
 		title: 'Observation',
 		date: '2025-02-08',
 		filename: 'observation.md'
-	},
-	{
-		title: 'Yearly Review 2024',
-		date: '2025-01-15',
-		filename: 'yearly-review-2024.md'
 	}
 ];
 
